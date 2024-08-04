@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Basic reset for margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar container styling */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    align-items: center; /* Center links vertically */
+    background-color: #333; /* Dark background color */
+    padding: 10px 20px; /* Padding around the navbar */
+}
+
+/* Navbar link styling */
+.navbar a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Padding around each link */
+    font-size: 16px; /* Font size of the links */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+/* Navbar link hover effect */
+.navbar a:hover {
+    background-color: #575757; /* Darker background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Navbar link active effect */
+.navbar a.active {
+    background-color: #111; /* Darker background for active link */
+}
