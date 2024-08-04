@@ -16,7 +16,6 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <NavBar/>
         <App />
       </PersistGate>
     </Provider>,

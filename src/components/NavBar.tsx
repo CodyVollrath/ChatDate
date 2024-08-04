@@ -1,4 +1,5 @@
-import React, {MouseEvent} from 'react';
+import React, {MouseEvent, useState} from 'react';
+import { NavLink } from 'react-router-dom';
 import { logoutUser } from '../api/requests';
 import { logout } from '../redux/store';
 import { useDispatch } from 'react-redux';
@@ -14,15 +15,15 @@ const NavBar: React.FunctionComponent<IAboutPageProps> = (props) => {
         }).catch((err) => {
             alert(err.message);
         })
-        return 
     }
+
     return (
         <div className="navbar">
-            <a href="/">Home</a>
-            <a href='/login'>Login</a>
-            <a href='/' onClick={handleLogout}>Logout</a>
-            <a href='/about'>About</a>
-            <a href='/signup'>Signup</a>
+            <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
+            <NavLink to="/login" className={({ isActive }) => isActive ? 'active' : ''}>Login</NavLink>
+            <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink>
+            <NavLink to="/signup" className={({ isActive }) => isActive ? 'active' : ''}>Signup</NavLink>
+            <a href="/" onClick={handleLogout}>Logout</a>
         </div>
     );
 }
